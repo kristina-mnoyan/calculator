@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo Suite">
+    <test name="Sum">
+        <classes>
+            <class name="com.epam.cdp.testng.MathOperations"></class>
+        </classes>
+    </test>
+</suite>
