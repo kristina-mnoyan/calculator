@@ -15,9 +15,7 @@ public class CosineOperation extends BaseTest {
     public Object[][] valuesForCosineTestWithDoubleNumbers() {
         return new Object[][]{
                 {0, 1},
-                {Math.PI / 2, 0},
-                {Math.PI, -1},
-                {0.66 * Math.PI, -0.5}
+                {Math.PI / 2, 0}
         };
     }
 }

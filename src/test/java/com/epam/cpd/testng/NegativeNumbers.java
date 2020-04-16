@@ -14,9 +14,9 @@ public class NegativeNumbers extends BaseTest {
     @DataProvider(name = "valuesForNegativeLongNumbersTest")
     public Object[][] valuesForNegativeLongNumbersTest() {
         return new Object[][]{
-                {-1000, true},
-                {100, false},
-                {0, false}
+                {-1854L, true},
+                {6666666666666L, false},
+                {-99999L, true}
         };
     }
 }

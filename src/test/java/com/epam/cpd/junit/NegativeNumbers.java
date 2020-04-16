@@ -15,8 +15,8 @@ public class NegativeNumbers extends BaseTest {
 
     public static Object[][] valuesForNegativeLongNumbersTest() {
         return new Object[][]{
-                {-1000, true},
-                {100, false},
+                {-1000L, true},
+                {100L, false},
                 {0, false}
         };
     }

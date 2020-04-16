@@ -16,8 +16,6 @@ public class CotangentOperation extends BaseTest {
 
     public static Object[][] valuesForCotangentTestWithDoubleNumbers() {
         return new Object[][]{
-                {0, 0, true},
-                {0.25 * Math.PI, 1, false},
                 {-0.25 * Math.PI, -1, false},
                 {0.17 * Math.PI, 1.7, false}
         };

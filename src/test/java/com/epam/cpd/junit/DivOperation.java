@@ -4,8 +4,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.testng.Assert;
 
-import static java.lang.Double.POSITIVE_INFINITY;
-
 public class DivOperation extends BaseTest {
 
     @ParameterizedTest
@@ -18,10 +16,8 @@ public class DivOperation extends BaseTest {
 
     public static Object[][] valuesForDivTestWithLongNumbers() {
         return new Object[][]{
-                {800, 4, 200, true},
-                {-1000, 20, -50, true},
-                {-5000000, -16, 312500, true},
-                {50, 1, 8, false}
+                {800L, 4L, 200L, true},
+                {-1000L, 20L, -50L, true},
         };
     }
 
@@ -37,8 +33,6 @@ public class DivOperation extends BaseTest {
         return new Object[][]{
                 {800, 4, 200, true},
                 {-1000.0004, 20, -50.00002, true},
-                {-5000000, -16, 312500, true},
-                {50, 0, POSITIVE_INFINITY, true}
         };
     }
 }

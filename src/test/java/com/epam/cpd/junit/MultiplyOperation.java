@@ -15,26 +15,23 @@ public class MultiplyOperation extends BaseTest {
 
     public static Object[][] valuesForMultiplyTestWithLongNumbers() {
         return new Object[][]{
-                {500, 800, 400000},
-                {-1000, 3000, -3000000},
-                {-25, -45, 1125},
-                {0, 0, 0}
+                {500L, 800L, 400000L},
+                {-1000L, 3000L, -3000000L}
         };
     }
 
     @ParameterizedTest
     @MethodSource("valuesForMultiplyTestWithDoubleNumbers")
-    public void multiplyOperationForDoubleNumbers(double firstNumber, double secondNumber, double expectedResult) {
+    public void multiplyOperationForDoubleNumbers(double firstNumber, double secondNumber, double expectedResult, boolean isExpectedResultCorrect) {
         double actualResult = calculator.mult(firstNumber, secondNumber);
-        Assert.assertEquals(actualResult, Math.floor(expectedResult), "Invalid result of Multiply Operation");
+        boolean isActualResultCorrect = actualResult == expectedResult;
+        Assert.assertEquals(isActualResultCorrect, isExpectedResultCorrect, "Invalid result of Multiply Operation");
     }
 
     public static Object[][] valuesForMultiplyTestWithDoubleNumbers() {
         return new Object[][]{
-                {51.78548, 8.621475, 446.467221183},
-                {-100.1, 300.28, -30058.028},
-                {-25.2147, -45.26, 1141.217322},
-                {0, 0.154787496, 0}
+                {51.78548, 8.621475, 446.467221183, false},
+                {-100.1, 300.28, -30058.028, false},
         };
     }
 }

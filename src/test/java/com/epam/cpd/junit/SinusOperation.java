@@ -16,9 +16,7 @@ public class SinusOperation extends BaseTest {
     public static Object[][] valuesForSinusTestWithDoubleNumbers() {
         return new Object[][]{
                 {0, 0},
-                {Math.PI / 2, 1},
-                {1.5 * Math.PI, -1},
-                {1.17 * Math.PI, -0.5}
+                {Math.PI / 2, 1}
         };
     }
 }

@@ -18,11 +18,15 @@ public class DivOperation extends BaseTest {
     @DataProvider(name = "valuesForDivTestWithLongNumbers")
     public Object[][] valuesForDivTestWithLongNumbers() {
         return new Object[][]{
-                {800, 4, 200, true},
-                {-1000, 20, -50, true},
-                {-5000000, -16, 312500, true},
-                {50, 8, 60, false}
+                {50, 5, 60, false},
+                {-5000000, -16, 312500, true}
         };
+    }
+
+    @Test(expectedExceptions = NumberFormatException.class)
+    public void divOperationTestOnZero() {
+        long actualResult = calculator.div(5000L, 0);
+        Assert.assertNotEquals(actualResult, 0, "Invalid result of Div Operation");
     }
 
     @Test(dataProvider = "valuesForDivTestWithDoubleNumbers")
@@ -35,8 +39,6 @@ public class DivOperation extends BaseTest {
     @DataProvider(name = "valuesForDivTestWithDoubleNumbers")
     public Object[][] valuesForDivTestWithDoubleNumbers() {
         return new Object[][]{
-                {800, 4, 200, true},
-                {-1000.0004, 20, -50.00002, true},
                 {-5000000, -16, 312500, true},
                 {50, 0, POSITIVE_INFINITY, true}
         };

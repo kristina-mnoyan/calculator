@@ -6,18 +6,17 @@ import org.testng.annotations.Test;
 
 public class PowOperation extends BaseTest {
     @Test(dataProvider = "valuesForPowTestWithDoubleNumbers")
-    public void powOperationTestForDoubleNumbers(double firstNumber, double secondNumber, double expectedResult) {
+    public void powOperationTestForDoubleNumbers(double firstNumber, double secondNumber, double expectedResult, boolean isExpectedResultCorrect) {
         double actualResult = calculator.pow(firstNumber, secondNumber);
-        Assert.assertEquals((double) Math.round(actualResult * 100000d) / 100000d, expectedResult, "Invalid result of Pow Operation");
+        boolean isActualResultCorrect = actualResult == expectedResult;
+        Assert.assertEquals(isActualResultCorrect, isExpectedResultCorrect, "Invalid result of Pow Operation");
     }
 
     @DataProvider(name = "valuesForPowTestWithDoubleNumbers")
     public Object[][] valuesForPowTestWithDoubleNumbers() {
         return new Object[][]{
-                {2, 8, 256},
-                {-1000, 0, 1},
-                {-2.5, 3, -15.625},
-                {-0.7, 4, 0.2401}
+                {150.0625, 0.25, 3.5, false},
+                {-1000, 0, 1, true}
         };
     }
 }

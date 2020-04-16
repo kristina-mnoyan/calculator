@@ -17,9 +17,7 @@ public class TangentOperation extends BaseTest {
     public static Object[][] valuesForTangentTestWithDoubleNumbers() {
         return new Object[][]{
                 {0, 0, true},
-                {0.25 * Math.PI, 1, true},
-                {-0.25 * Math.PI, -1, false},
-                {0.33 * Math.PI, 1.7, false}
+                {0.25 * Math.PI, 1, true}
         };
     }
 }

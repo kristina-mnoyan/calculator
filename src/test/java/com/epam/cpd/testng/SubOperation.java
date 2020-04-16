@@ -15,10 +15,8 @@ public class SubOperation extends BaseTest {
     @DataProvider(name = "valuesForSubTestWithLongNumbers")
     public Object[][] valuesForSubTestWithLongNumbers() {
         return new Object[][]{
-                {500, 800, -300},
-                {-1000, 3000, -4000},
-                {-25, -45, 20},
-                {0, 0, 0}
+                {500L, 800L, -300L},
+                {-1000L, 3000L, -4000L},
         };
     }
 
@@ -33,8 +31,6 @@ public class SubOperation extends BaseTest {
         return new Object[][]{
                 {0.5475, 0.18, 0.3675},
                 {-10.2658, -6.15, -4.1158},
-                {-25.008, 45.1, -70.108},
-                {1652.748, 254.3547, 1398.3933}
         };
     }
 }

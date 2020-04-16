@@ -14,8 +14,8 @@ public class PositiveNumbers extends BaseTest {
     @DataProvider(name = "valuesForPositiveLongNumbersTest")
     public Object[][] valuesForPositiveLongNumbersTest() {
         return new Object[][]{
-                {-658215, false},
-                {548552248, true},
+                {-658215L, false},
+                {548552248L, true},
                 {0, false}
         };
     }

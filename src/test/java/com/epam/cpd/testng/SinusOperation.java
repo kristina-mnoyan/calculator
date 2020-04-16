@@ -14,8 +14,6 @@ public class SinusOperation extends BaseTest {
     @DataProvider(name = "valuesForSinusTestWithDoubleNumbers")
     public Object[][] valuesForSinTestWithDoubleNumbers() {
         return new Object[][]{
-                {0, 0},
-                {Math.PI / 2, 1},
                 {1.5 * Math.PI, -1},
                 {1.17 * Math.PI, -0.5}
         };

@@ -15,8 +15,6 @@ public class PowOperation extends BaseTest {
 
     public static Object[][] valuesForPowTestWithDoubleNumbers() {
         return new Object[][]{
-                {2, 8, 256},
-                {-1000, 0, 1},
                 {-2.5, 3, -15.625},
                 {-0.7, 4, 0.2401}
         };

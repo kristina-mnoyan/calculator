@@ -17,10 +17,8 @@ public class SumOperation extends BaseTest {
 
     public static Object[][] valuesForSumTestWithLongNumbers() {
         return new Object[][]{
-                {500, 800, 1300},
-                {-1000, 3000, 2000},
-                {-25, -45, -70},
-                {0, 0, 0}
+                {500L, 800L, 1300L},
+                {-1000L, 3000L, 2000L},
         };
     }
 
@@ -35,8 +33,6 @@ public class SumOperation extends BaseTest {
         return new Object[][]{
                 {1245.759, 3.65782, 1249.41682},
                 {-0.754, 5.217, 4.463},
-                {7.65, 5.777, 13.427},
-                {-3.77, -8.147, -11.917}
         };
     }
 }
