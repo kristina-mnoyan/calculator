@@ -1,18 +1,18 @@
 package com.epam.cpd.junit;
 
 import com.epam.tat.module4.Calculator;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 
 public class BaseTest {
     protected Calculator calculator;
 
-    @BeforeClass
+    @BeforeEach
     public void setUp() {
         calculator = new Calculator();
     }
 
-    @AfterClass
+    @AfterEach
     public void tearDown() {
         calculator = null;
     }
